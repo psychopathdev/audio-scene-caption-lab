@@ -21,3 +21,5 @@ class CountingProbe(Probe):
                          prompt="How many dots are in this image? Answer with a single digit.",
                          answer=str(k),
                          meta={"k": k})
+
+# v0.1 marker
