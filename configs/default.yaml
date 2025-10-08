@@ -1,0 +1,13 @@
+# default sweep
+probes:
+  - counting
+  - color_binding
+  - spatial_rel
+
+models:
+  - llava-hf/llava-1.5-7b-hf
+  - Salesforce/instructblip-vicuna-7b
+
+n: 200
+seed: 0
+device: cuda
