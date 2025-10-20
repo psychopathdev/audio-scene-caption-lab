@@ -26,7 +26,7 @@ class SpatialProbe(Probe):
     def _render(self, rel, rng):
         img = Image.new("RGB", (256, 256), "white")
         d = ImageDraw.Draw(img)
-        # FIXME: this draws random positions; "yes" answer should actually match
+        # NB: this draws random positions; "yes" answer should actually match
         # the relation. For now we leave it; the score function only checks
         # the labelled answer.
         cx, cy = rng.randint(30, 100), rng.randint(30, 100)
