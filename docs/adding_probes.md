@@ -36,7 +36,3 @@ CLI will pick it up automatically.
 - Put all randomness behind the `seed` argument so runs are reproducible.
 - If the model's free-form answer doesn't trivially substring-match the gold,
   override `score` (see `counting.py` for an example using a regex).
-
-## Reproducibility
-
-When reporting numbers, pin both the probe version (git tag) and the model checkpoint hash.
