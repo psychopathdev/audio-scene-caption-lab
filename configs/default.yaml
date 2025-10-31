@@ -11,3 +11,5 @@ models:
 n: 200
 seed: 0
 device: cuda
+
+# add more models here
