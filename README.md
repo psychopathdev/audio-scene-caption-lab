@@ -156,10 +156,3 @@ Preliminary results on a few open multimodal models (April 2025 snapshot):
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE).
-
-
-## Known Limitations
-
-- Synthetic stimuli only; not a substitute for real-photo benchmarks.
-- `spatial_rel` answers are partly stochastic — see issue #3.
-- `text_read` uses pillow font rendering which can vary across platforms.
