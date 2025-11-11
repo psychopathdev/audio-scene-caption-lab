@@ -156,3 +156,8 @@ Preliminary results on a few open multimodal models (April 2025 snapshot):
 ## License
 
 Apache License 2.0 — see [LICENSE](LICENSE).
+
+
+## A note on prompt sensitivity
+
+Probe scores can shift several points depending on how the prompt is phrased. The shipped prompts were chosen to be unambiguous, not to maximize any single model's score.
