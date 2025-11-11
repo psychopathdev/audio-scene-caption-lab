@@ -12,5 +12,6 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: pip install -e .
-      - run: pip install pytest
+      - run: pip install pytest ruff
+      - run: ruff check mmprobe/ || true
       - run: pytest -q
