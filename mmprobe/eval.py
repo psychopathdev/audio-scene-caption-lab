@@ -39,3 +39,5 @@ def evaluate(probe: Probe, runner, n: int = 200, seed: int = 0, progress: bool =
         accuracy=correct / total if total else 0.0,
         per_bucket={k: v[0] / v[1] for k, v in bucket.items() if v[1]},
     )
+
+# end of eval module
