@@ -14,6 +14,8 @@ def main():
     for path in glob.glob(os.path.join(args.dir, "*.json")):
         with open(path) as f:
             data = json.load(f)
+        if "accuracy" not in data:
+            continue
         rows.append({"model": data["model"], "probe": data["probe"],
                      "accuracy": data["accuracy"]})
 
@@ -26,7 +28,6 @@ def main():
         w.writeheader()
         w.writerows(rows)
 
-    # pivot
     table = defaultdict(dict)
     probes = set()
     for r in rows:
@@ -37,7 +38,7 @@ def main():
         w = csv.writer(f)
         w.writerow(["model"] + probes)
         for m, by_probe in sorted(table.items()):
-            w.writerow([m] + [f"{by_probe.get(p, ''):.3f}" if by_probe.get(p) is not None else "" for p in probes])
+            w.writerow([m] + [f"{by_probe.get(p, ''):.3f}" if p in by_probe else "" for p in probes])
     print(f"wrote {len(rows)} rows -> {args.out}")
     print(f"pivot -> {args.pivot}")
 
