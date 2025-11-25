@@ -36,3 +36,7 @@ CLI will pick it up automatically.
 - Put all randomness behind the `seed` argument so runs are reproducible.
 - If the model's free-form answer doesn't trivially substring-match the gold,
   override `score` (see `counting.py` for an example using a regex).
+
+## OpenAI-compatible endpoints
+
+Any OpenAI-compatible vision endpoint can be used by setting `OPENAI_BASE_URL` before instantiating `OpenAIRunner`. OpenRouter and vLLM both work this way.
